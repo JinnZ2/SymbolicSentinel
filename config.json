@@ -1,0 +1,17 @@
+{
+    "volatility": 0.65,
+    "narrative_shift": true,
+    "debt_load": 0.72,
+    "generational_displacement": true,
+    "logistics_crack": 0.6,
+    "food_distribution": 0.4,
+    "community_trust": 0.3,
+    "housing_stress": 0.5,
+    "currency_drift": 0.55,
+    "long_term_viability": 0.35,
+    "interest_rate": 0.68,
+    "consumer_confidence": 0.3,
+    "abandoned_projects": 2,
+    "waste_energy": -1.8,
+    "infrastructure_fragments": -2.1
+}
