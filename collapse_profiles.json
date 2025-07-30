@@ -1,0 +1,18 @@
+{
+    "2008_financial_crisis": {
+        "volatility": 0.92,
+        "debt_load": 0.85,
+        "consumer_confidence": 0.3,
+        "housing_stress": 0.9,
+        "currency_drift": 0.6,
+        "interest_rate": 0.5
+    },
+    "2025_stress_test": {
+        "volatility": 0.72,
+        "debt_load": 0.8,
+        "consumer_confidence": 0.25,
+        "housing_stress": 0.6,
+        "currency_drift": 0.55,
+        "interest_rate": 0.75
+    }
+}
