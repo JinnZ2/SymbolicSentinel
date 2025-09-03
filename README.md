@@ -72,3 +72,7 @@ Designed to help people (like the creator’s mother) avoid losing life savings 
 ## GitHub
 
 🌐 https://github.com/JinnZ2/SymbolicSentinel
+
+
+
+[🔷 Tri-Invert Bridge — seed & docs](./docs/tri_invert_bridge.md)
