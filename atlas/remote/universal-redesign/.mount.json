@@ -1,0 +1,6 @@
+{
+  "mount": "universal-redesign",
+  "repo": "https://github.com/JinnZ2/universal-redesign",
+  "status": "stub",
+  "note": "Run fieldlink-pull.sh to fetch content from this remote repository"
+}

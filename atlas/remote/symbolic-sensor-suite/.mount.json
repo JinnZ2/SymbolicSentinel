@@ -1,0 +1,6 @@
+{
+  "mount": "symbolic-sensor-suite",
+  "repo": "https://github.com/JinnZ2/symbolic-sensor-suite",
+  "status": "stub",
+  "note": "Run fieldlink-pull.sh to fetch content from this remote repository"
+}

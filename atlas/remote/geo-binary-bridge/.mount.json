@@ -1,0 +1,6 @@
+{
+  "mount": "geo-binary-bridge",
+  "repo": "https://github.com/JinnZ2/geo-binary-bridge",
+  "status": "stub",
+  "note": "Run fieldlink-pull.sh to fetch content from this remote repository"
+}

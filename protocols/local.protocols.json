@@ -1,0 +1,33 @@
+{
+  "id": "symbolicsentinel:protocols",
+  "source": "SymbolicSentinel",
+  "version": 1,
+  "protocols": {
+    "evaluate": {
+      "description": "Run animal sensors against a system state dictionary",
+      "input": "system_state (dict: signal_name -> numeric|boolean)",
+      "output": "list of (signal_name, alert_message) tuples",
+      "entry_points": [
+        "animal_market_sensor.py → animal_sensors list",
+        "sentinel_engine.py → SymbolicSentinel.run_sensors()"
+      ]
+    },
+    "renew": {
+      "description": "Post-collapse renewal pass — scavenge and propose rebuilding actions",
+      "input": "system_state (dict with negative values indicating decay)",
+      "output": "list of agent results with proposed salvage actions",
+      "entry_point": "vulture_renewal_network.py → run_renewal_pass()"
+    },
+    "cycle_detect": {
+      "description": "Detect rebirth thresholds using cycle initiator agents",
+      "input": "system_state",
+      "output": "cycle initiation signals",
+      "entry_point": "cycle_initiators.py"
+    }
+  },
+  "trigger_logic": {
+    "gt": "Triggers when signal exceeds threshold",
+    "lt": "Triggers when signal falls below threshold",
+    "boolean": "Triggers on exact True/False match"
+  }
+}
