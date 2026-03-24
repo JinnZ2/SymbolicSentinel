@@ -30,7 +30,7 @@ SymbolicSentinel is an AI-guided early warning system for detecting systemic col
 ├── .fieldlink.json            # Ecosystem links — BioGrid2.0 atlas + remote mounts
 ├── fieldlink-pull.sh          # Fetches remote ecosystem repos into atlas/remote/
 ├── animal_modules/            # Individual animal behavior modules
-│   ├── init.py                # Loads: Raven, Elephant, Vulture, CarrionBeetle, Hyena
+│   ├── __init__.py            # Loads all animal classes via load_all_animals()
 │   ├── raven.py, elephant.py, spider.py, owl.py, frog.py
 │   ├── ant.py, bee.py, whale.py, hyena.py
 │   ├── vulture.py, carrion_beetle.py
@@ -180,6 +180,6 @@ All local manifests (`glyphs/`, `sensors/`, `protocols/`, `atlas/shapes.json`) c
 - This project intentionally has **zero external dependencies**. Do not add pip packages.
 - The project uses **metaphorical/symbolic naming** (animals, glyphs, collapse). Respect the domain language.
 - `config.json` is user-facing — keep it simple and well-structured.
-- The `animal_modules/init.py` file (not `__init__.py`) serves as the module loader.
+- The `animal_modules/__init__.py` file serves as the module loader — it imports all animal classes and exposes `load_all_animals()`.
 - Two parallel sensor systems exist (`animal_market_sensor.py` and `animal_modules/`). Both are valid entry paths.
 - Collapse profiles in `collapse_profiles.json` are historical reference data — preserve integrity.

@@ -30,7 +30,7 @@ class GlyphEngine:
                     })
 
         self.history.append({
-            "time": str(datetime.datetime.utcnow()),
+            "time": str(datetime.datetime.now(datetime.timezone.utc)),
             "input": signal_data,
             "output": alerts
         })
@@ -43,6 +43,8 @@ class GlyphEngine:
         Extend this method for more complex signal processing or AI detection.
         """
         for key, val in trigger.items():
+            if key == "confidence":
+                continue
             if key not in signal:
                 return False
             if isinstance(val, dict):
