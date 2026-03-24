@@ -1,0 +1,25 @@
+{
+  "id": "symbolicsentinel:sensors",
+  "source": "SymbolicSentinel",
+  "version": 1,
+  "sensor_classes": {
+    "warning": {
+      "agents": ["Raven", "Elephant", "Ant", "Wolf", "Whale", "Canary", "Spider", "Owl", "Frog", "Bee"],
+      "purpose": "Detect collapse signals across economic, ecological, and energetic systems"
+    },
+    "renewal": {
+      "agents": ["Vulture", "CarrionBeetle", "Hyena"],
+      "purpose": "Post-collapse scavenging, salvage, and regenerative rebuilding"
+    },
+    "cycle": {
+      "agents": ["Butterfly", "Spider", "Frog", "Owl", "Turtle"],
+      "purpose": "Detect rebirth thresholds and initiate renewal cycles"
+    }
+  },
+  "signals": [
+    "volatility", "narrative_shift", "debt_load", "generational_displacement",
+    "logistics_crack", "food_distribution", "community_trust", "housing_stress",
+    "currency_drift", "long_term_viability", "interest_rate", "consumer_confidence",
+    "abandoned_projects", "waste_energy", "infrastructure_fragments"
+  ]
+}

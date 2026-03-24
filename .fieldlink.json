@@ -11,6 +11,28 @@
       "sensors/**",
       "atlas/shapes.json"
     ],
-    "role": "sensors|protocols|shapes|hub"
+    "remote_mounts": {
+      "symbolic-sensor-suite": {
+        "repo": "https://github.com/JinnZ2/symbolic-sensor-suite",
+        "mount": "atlas/remote/symbolic-sensor-suite/",
+        "provides": ["sensors", "glyphs"]
+      },
+      "geo-binary-bridge": {
+        "repo": "https://github.com/JinnZ2/geo-binary-bridge",
+        "mount": "atlas/remote/geo-binary-bridge/",
+        "provides": ["protocols", "shapes"]
+      },
+      "universal-redesign": {
+        "repo": "https://github.com/JinnZ2/universal-redesign",
+        "mount": "atlas/remote/universal-redesign/",
+        "provides": ["protocols", "shapes"]
+      }
+    },
+    "role": "sensors|protocols|shapes|hub",
+    "sync": {
+      "script": "fieldlink-pull.sh",
+      "strategy": "shallow-clone",
+      "note": "Run ./fieldlink-pull.sh to populate atlas/remote/ from declared mounts"
+    }
   }
 }

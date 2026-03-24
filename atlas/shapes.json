@@ -1,0 +1,32 @@
+{
+  "id": "symbolicsentinel:atlas:shapes",
+  "source": "SymbolicSentinel",
+  "version": 1,
+  "shapes": [
+    {
+      "id": "tri-invert-bridge",
+      "seed": "data/tri_invert_bridge.seed.json",
+      "glyphs": "data/tri_invert_bridge.glyphs.json",
+      "schema": "schema/shape.seed.schema.json",
+      "geometry": "dual-triangle",
+      "dimensions": 3
+    }
+  ],
+  "remote_mounts": {
+    "symbolic-sensor-suite": {
+      "path": "atlas/remote/symbolic-sensor-suite/",
+      "repo": "https://github.com/JinnZ2/symbolic-sensor-suite",
+      "status": "declared"
+    },
+    "geo-binary-bridge": {
+      "path": "atlas/remote/geo-binary-bridge/",
+      "repo": "https://github.com/JinnZ2/geo-binary-bridge",
+      "status": "declared"
+    },
+    "universal-redesign": {
+      "path": "atlas/remote/universal-redesign/",
+      "repo": "https://github.com/JinnZ2/universal-redesign",
+      "status": "declared"
+    }
+  }
+}

@@ -27,12 +27,25 @@ SymbolicSentinel is an AI-guided early warning system for detecting systemic col
 ├── market_warning_system.py   # Market warning system
 ├── config.json                # User-configurable system state input values
 ├── collapse_profiles.json     # Historical collapse profiles (2008 crisis, 2025 stress test)
-├── .fieldlink.json            # Links to external BioGrid2.0 atlas repository
+├── .fieldlink.json            # Ecosystem links — BioGrid2.0 atlas + remote mounts
+├── fieldlink-pull.sh          # Fetches remote ecosystem repos into atlas/remote/
 ├── animal_modules/            # Individual animal behavior modules
 │   ├── init.py                # Loads: Raven, Elephant, Vulture, CarrionBeetle, Hyena
 │   ├── raven.py, elephant.py, spider.py, owl.py, frog.py
 │   ├── ant.py, bee.py, whale.py, hyena.py
 │   ├── vulture.py, carrion_beetle.py
+├── glyphs/                    # Local glyph manifest (ecosystem-exportable)
+│   └── local.glyphs.json
+├── sensors/                   # Local sensor manifest (ecosystem-exportable)
+│   └── local.sensors.json
+├── protocols/                 # Local protocol manifest (ecosystem-exportable)
+│   └── local.protocols.json
+├── atlas/                     # Ecosystem atlas — shapes registry + remote mounts
+│   ├── shapes.json            # Shape index + declared remote mount targets
+│   └── remote/                # Mount points for ecosystem repos (populated by fieldlink-pull.sh)
+│       ├── symbolic-sensor-suite/
+│       ├── geo-binary-bridge/
+│       └── universal-redesign/
 ├── data/                      # Tri-Invert Bridge seed and glyph JSON data
 ├── schema/                    # JSON Schema definitions (shape.seed.schema.json)
 └── docs/                      # Extended documentation (tri_invert_bridge.md)
@@ -116,6 +129,45 @@ The project uses symbolic glyphs for state representation:
 - `🕸` — lattice / network density
 
 The **Tri-Invert Bridge** (`docs/tri_invert_bridge.md`) is a core concept: dual-triangle geometry enabling reversible state translation between collapse and renewal.
+
+## Fieldlink Ecosystem
+
+SymbolicSentinel operates as a **hub** in the BioGrid2.0 ecosystem. It can run fully standalone, but also exports and imports data with sibling repos via the fieldlink protocol.
+
+### Local Manifests (this repo's exports)
+
+- `glyphs/local.glyphs.json` — glyph definitions (↻, ⚖, 🕸)
+- `sensors/local.sensors.json` — sensor agent registry (warning, renewal, cycle)
+- `protocols/local.protocols.json` — protocol definitions (evaluate, renew, cycle_detect)
+- `atlas/shapes.json` — shape index with Tri-Invert Bridge + remote mount declarations
+
+### Remote Mounts (ecosystem repos)
+
+Declared in `.fieldlink.json` and `atlas/shapes.json`:
+
+| Mount | Repo | Provides |
+|---|---|---|
+| `atlas/remote/symbolic-sensor-suite/` | JinnZ2/symbolic-sensor-suite | sensors, glyphs |
+| `atlas/remote/geo-binary-bridge/` | JinnZ2/geo-binary-bridge | protocols, shapes |
+| `atlas/remote/universal-redesign/` | JinnZ2/universal-redesign | protocols, shapes |
+
+These directories contain `.mount.json` stubs until content is fetched.
+
+### Syncing Remote Content
+
+```bash
+# Pull all declared mounts
+./fieldlink-pull.sh
+
+# Pull a specific mount
+./fieldlink-pull.sh symbolic-sensor-suite
+```
+
+The script shallow-clones each repo into its mount point. Existing mounts are updated via `git pull --ff-only`. If a repo doesn't exist yet, the stub is preserved.
+
+### Independence Guarantee
+
+All local manifests (`glyphs/`, `sensors/`, `protocols/`, `atlas/shapes.json`) contain this repo's own data. The `atlas/remote/` mounts are optional — SymbolicSentinel runs without them. The ecosystem integration is additive, never required.
 
 ## Git Conventions
 

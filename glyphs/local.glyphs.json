@@ -1,0 +1,25 @@
+{
+  "id": "symbolicsentinel:glyphs",
+  "source": "SymbolicSentinel",
+  "version": 1,
+  "glyphs": {
+    "↻": {
+      "name": "phase-shift",
+      "domain": "state-transition",
+      "description": "Melt / phase-shift between collapse and renewal states"
+    },
+    "⚖": {
+      "name": "balance",
+      "domain": "bidirectional-mapping",
+      "description": "Balance / reversible weight adjustment across semantic drift"
+    },
+    "🕸": {
+      "name": "lattice",
+      "domain": "network-density",
+      "description": "Field lattice / routing mesh for signal propagation"
+    }
+  },
+  "seeds": [
+    "tri-invert-bridge"
+  ]
+}
