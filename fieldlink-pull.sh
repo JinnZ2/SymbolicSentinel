@@ -23,27 +23,25 @@ json_value() {
     local file="$1" key="$2"
     python3 -c "
 import json, sys
-with open('$file') as f:
+with open(sys.argv[1]) as f:
     data = json.load(f)
-keys = '$key'.split('.')
-for k in keys:
+for k in sys.argv[2].split('.'):
     data = data[k]
 print(data)
-" 2>/dev/null
+" "$file" "$key" 2>/dev/null
 }
 
 json_keys() {
     local file="$1" path="$2"
     python3 -c "
-import json
-with open('$file') as f:
+import json, sys
+with open(sys.argv[1]) as f:
     data = json.load(f)
-keys = '$path'.split('.')
-for k in keys:
+for k in sys.argv[2].split('.'):
     data = data[k]
 for k in data:
     print(k)
-" 2>/dev/null
+" "$file" "$path" 2>/dev/null
 }
 
 # ------------------------------------------------------------
@@ -88,14 +86,15 @@ pull_mount() {
     # Update mount status
     if [ -f "$target/.mount.json" ]; then
         python3 -c "
-import json
-with open('$target/.mount.json', 'r') as f:
+import json, sys
+p = sys.argv[1]
+with open(p, 'r') as f:
     data = json.load(f)
 data['status'] = 'mounted'
-with open('$target/.mount.json', 'w') as f:
+with open(p, 'w') as f:
     json.dump(data, f, indent=2)
     f.write('\n')
-" 2>/dev/null
+" "$target/.mount.json" 2>/dev/null
     fi
 }
 
@@ -120,7 +119,7 @@ else
     echo "Pulling all declared mounts..."
     echo ""
     for mount in $(json_keys "$ATLAS_SHAPES" "remote_mounts"); do
-        pull_mount "$mount"
+        pull_mount "$mount" || true
         echo ""
     done
 fi
