@@ -1,0 +1,50 @@
+{
+  "raven": {
+    "glyph": "↻",
+    "response": "Narrative distortion detected — initiating deception audit",
+    "triggers": [
+      {"pattern_shift_score": {"gt": 0.6}, "confidence": 0.8},
+      {"information_distortion": {"gt": 0.5}, "confidence": 0.75}
+    ]
+  },
+  "elephant": {
+    "glyph": "⚖",
+    "response": "Memory continuity breach — intergenerational pattern disruption",
+    "triggers": [
+      {"deep_memory_suppression": {"gt": 0.6}, "confidence": 0.85},
+      {"generational_disruption": true, "confidence": 0.9}
+    ]
+  },
+  "spider": {
+    "glyph": "🕸",
+    "response": "Network fragility rising — reweaving protocol activated",
+    "triggers": [
+      {"network_fragility": {"gt": 0.6}, "confidence": 0.8},
+      {"social_disconnection": {"gt": 0.7}, "confidence": 0.7}
+    ]
+  },
+  "vulture": {
+    "glyph": "↻",
+    "response": "Collapse zone detected — scavenger recovery initiated",
+    "triggers": [
+      {"resource_waste": {"gt": 0.6}, "confidence": 0.8},
+      {"infrastructure_decay": {"gt": 0.5}, "confidence": 0.75}
+    ]
+  },
+  "owl": {
+    "glyph": "⚖",
+    "response": "Truth obscured — symbolic night-vision filter engaged",
+    "triggers": [
+      {"signal_noise_ratio": {"lt": 0.5}, "confidence": 0.8},
+      {"decision_blindness": {"gt": 0.7}, "confidence": 0.75}
+    ]
+  },
+  "frog": {
+    "glyph": "↻",
+    "response": "Ecosystem threshold crossed — regeneration initiated",
+    "triggers": [
+      {"ecosystem_entropy": {"gt": 0.5}, "confidence": 0.8},
+      {"toxic_load": {"gt": 0.6}, "confidence": 0.85}
+    ]
+  }
+}

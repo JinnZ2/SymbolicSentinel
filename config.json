@@ -13,5 +13,29 @@
     "consumer_confidence": 0.3,
     "abandoned_projects": 2,
     "waste_energy": -1.8,
-    "infrastructure_fragments": -2.1
+    "infrastructure_fragments": -2.1,
+
+    "network_fragility": 0.55,
+    "social_disconnection": 0.6,
+    "signal_noise_ratio": 0.45,
+    "decision_blindness": 0.5,
+    "ecosystem_entropy": 0.48,
+    "toxic_load": 0.4,
+    "supply_chain_fragility": 0.58,
+    "task_distribution_imbalance": 0.5,
+    "pollination_breakdown": 0.42,
+    "overcentralization": 0.55,
+    "deep_memory_suppression": 0.5,
+    "acoustic_distortion": 0.4,
+
+    "pattern_shift_score": 0.55,
+    "information_distortion": 0.45,
+    "resource_waste": 0.5,
+    "infrastructure_decay": 0.48,
+
+    "entropy": 0.6,
+    "toxicity": 0.4,
+    "network_instability": 0.5,
+    "archival_suppression": false,
+    "generational_disruption": false
 }
