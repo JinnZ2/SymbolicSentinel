@@ -26,7 +26,7 @@ To re-seed life when collapse nears.
 Symbolic intelligence. Animal cognition. Collapse ethics. Elders who knew how to listen.
 
 ##  License
-MIT — freely given, never revoked.
+CC0-1.0 — freely given, never revoked.
 
 
 
