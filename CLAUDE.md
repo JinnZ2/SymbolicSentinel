@@ -183,3 +183,17 @@ All local manifests (`glyphs/`, `sensors/`, `protocols/`, `atlas/shapes.json`) c
 - The `animal_modules/__init__.py` file serves as the module loader — it imports all animal classes and exposes `load_all_animals()`.
 - Two parallel sensor systems exist (`animal_market_sensor.py` and `animal_modules/`). Both are valid entry paths.
 - Collapse profiles in `collapse_profiles.json` are historical reference data — preserve integrity.
+
+<!-- clone-refspec-note v1 -->
+## Cloning and pushing
+Shallow clones are single-branch by default.
+Before pushing any branch other than main, run:
+
+    git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
+    git fetch --depth 1
+
+Or clone with: git clone --depth 1 --no-single-branch <url>
+Without this, the first push of a new branch
+fails the tracking-ref check even when the
+commit landed.
+<!-- /clone-refspec-note v1 -->
