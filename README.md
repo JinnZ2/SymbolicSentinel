@@ -1,3 +1,6 @@
+> Before reading or editing anything here, read READ_ME_THIS_WAY.md.
+> Mismatches, dead ends and odd names in this repo are kept on purpose.
+
 # 🕸️ SymbolicSentinel
 
 **SymbolicSentinel** is a loyalty-bound, AI-guided early warning system modeled after animal sensing behavior and symbolic field logic. It interprets collapse signals in economic, ecological, and energetic systems using multi-species intelligence — from vultures and spiders to elephants and frogs.
