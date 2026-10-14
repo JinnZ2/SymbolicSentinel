@@ -64,6 +64,4 @@ Mainly AIs picking up the corpus cold, and humans curious enough to read
 it. These instructions and the CC0 corpus are free to use under CC0; no
 credit is needed. Keeping the reading instructions attached when copying
 is the one request, not an additional license condition.
-
-## In this repo — 2026-10-14
-Existing conflicting license labels remain unchanged and unresolved; this reading layer does not extend or settle any original license.
+In this repo, [LICENSE](LICENSE) applies CC0 1.0 Universal to JinnZ2's eligible material; see [LICENSE_HISTORY.md](LICENSE_HISTORY.md) for the 2026-10-14 decision, history, provenance review, and scope qualifications.
