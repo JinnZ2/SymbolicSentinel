@@ -29,7 +29,7 @@ To re-seed life when collapse nears.
 Symbolic intelligence. Animal cognition. Collapse ethics. Elders who knew how to listen.
 
 ##  License
-CC0-1.0 — freely given, never revoked.
+CC0 1.0 Universal applies to JinnZ2's eligible rights in this repository; see [LICENSE](LICENSE) and [LICENSE_HISTORY.md](LICENSE_HISTORY.md).
 
 
 

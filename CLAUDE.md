@@ -11,7 +11,7 @@ SymbolicSentinel is an AI-guided early warning system for detecting systemic col
 - **Language:** Python 3 (pure stdlib — no external dependencies)
 - **Libraries:** `json`, `datetime`, `tkinter` (all standard library)
 - **Config format:** JSON
-- **License:** MIT
+- **License:** CC0 1.0 Universal for JinnZ2's eligible material; see `LICENSE` and `LICENSE_HISTORY.md` for current scope and history.
 
 ## Repository Structure
 
